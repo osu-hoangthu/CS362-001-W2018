@@ -101,8 +101,8 @@ public class Appt implements  Comparable&lt;Appt&gt;{
 <span class="fc" id="L101">        setRecurrence(recurringDays, RECUR_BY_MONTHLY, 0, RECUR_NUMBER_NEVER);</span>
 
         
-<span class="nc" id="L104">        isValid();</span>
-<span class="nc" id="L105">    }</span>
+<span class="fc" id="L104">        isValid();</span>
+<span class="fc" id="L105">    }</span>
 
 
   
@@ -110,54 +110,54 @@ public class Appt implements  Comparable&lt;Appt&gt;{
      * @sets valid to true if the appointment is valid
      */
     private void isValid() {
-<span class="nc" id="L113">    	int NumDaysInMonth= CalendarUtil.NumDaysInMonth(startYear,startMonth);</span>
+<span class="fc" id="L113">    	int NumDaysInMonth= CalendarUtil.NumDaysInMonth(startYear,startMonth);</span>
     				
-<span class="nc bnc" id="L115" title="All 4 branches missed.">    	if(startHour&lt;0 || startHour&gt;23)</span>
-<span class="nc" id="L116">    		this.valid=false;</span>
+<span class="pc bpc" id="L115" title="1 of 4 branches missed.">    	if(startHour&lt;0 || startHour&gt;23)</span>
+<span class="fc" id="L116">    		this.valid=false;</span>
     	else
-<span class="nc bnc" id="L118" title="All 4 branches missed.">        	if(startMinute&lt;0 || startMinute&gt;59)</span>
-<span class="nc" id="L119">        		this.valid=false;</span>
+<span class="pc bpc" id="L118" title="1 of 4 branches missed.">        	if(startMinute&lt;0 || startMinute&gt;59)</span>
+<span class="fc" id="L119">        		this.valid=false;</span>
         	else
-<span class="nc bnc" id="L121" title="All 4 branches missed.">            	if(startDay&lt;1 || startDay&gt;NumDaysInMonth)</span>
-<span class="nc" id="L122">            		this.valid=false;</span>
+<span class="pc bpc" id="L121" title="1 of 4 branches missed.">            	if(startDay&lt;1 || startDay&gt;NumDaysInMonth)</span>
+<span class="fc" id="L122">            		this.valid=false;</span>
             	else
-<span class="nc bnc" id="L124" title="All 4 branches missed.">                	if(startMonth&lt;1 || startMonth&gt;12)</span>
+<span class="pc bpc" id="L124" title="2 of 4 branches missed.">                	if(startMonth&lt;1 || startMonth&gt;12)</span>
 <span class="nc" id="L125">                		this.valid=false;</span>
                 	else
-<span class="nc" id="L127">                		this.valid=true;</span>
-<span class="nc" id="L128">    }</span>
+<span class="fc" id="L127">                		this.valid=true;</span>
+<span class="fc" id="L128">    }</span>
     
 
 
     /** Sets startHour */
     public void setStartHour(int startHour) {
-<span class="nc" id="L134">    	this.startHour = startHour;</span>
-<span class="nc" id="L135">    	 isValid();</span>
-<span class="nc" id="L136">    }</span>
+<span class="fc" id="L134">    	this.startHour = startHour;</span>
+<span class="fc" id="L135">    	 isValid();</span>
+<span class="fc" id="L136">    }</span>
     
     /** Sets startHour */
     public void setStartMinute(int startMinute) {   	
-<span class="nc" id="L140">        this.startMinute = startMinute;</span>
-<span class="nc" id="L141">        isValid();</span>
-<span class="nc" id="L142">    }</span>
+<span class="fc" id="L140">        this.startMinute = startMinute;</span>
+<span class="fc" id="L141">        isValid();</span>
+<span class="fc" id="L142">    }</span>
 
     /** Sets startDay */
     public void setStartDay(int startDay) {
-<span class="nc" id="L146">        this.startDay = startDay;</span>
-<span class="nc" id="L147">        isValid();</span>
-<span class="nc" id="L148">    }</span>
+<span class="fc" id="L146">        this.startDay = startDay;</span>
+<span class="fc" id="L147">        isValid();</span>
+<span class="fc" id="L148">    }</span>
     
     /** Sets startMonth */
     public void setStartMonth(int startMonth) {
-<span class="nc" id="L152">        this.startMonth = startMonth;</span>
-<span class="nc" id="L153">        isValid();</span>
-<span class="nc" id="L154">    }</span>
+<span class="fc" id="L152">        this.startMonth = startMonth;</span>
+<span class="fc" id="L153">        isValid();</span>
+<span class="fc" id="L154">    }</span>
     
     /** Sets startYear */
     public void setStartYear(int startYear) {
-<span class="nc" id="L158">        this.startYear = startYear;</span>
-<span class="nc" id="L159">        isValid();</span>
-<span class="nc" id="L160">    }</span>
+<span class="fc" id="L158">        this.startYear = startYear;</span>
+<span class="fc" id="L159">        isValid();</span>
+<span class="fc" id="L160">    }</span>
 
     /** Sets title */
     public void setTitle(String title) {
@@ -178,41 +178,41 @@ public class Appt implements  Comparable&lt;Appt&gt;{
     
     /** Gets startHour */
     public int getStartHour() {
-<span class="nc" id="L181">        return startHour;</span>
+<span class="fc" id="L181">        return startHour;</span>
     }
     
     /** Gets startHour */
     public int getStartMinute() {
-<span class="nc" id="L186">        return startMinute;</span>
+<span class="fc" id="L186">        return startMinute;</span>
     }
     
     /** Gets startDay */
     public int getStartDay() {
-<span class="nc" id="L191">        return startDay;</span>
+<span class="fc" id="L191">        return startDay;</span>
     }
     
     /** Gets startMonth */
     public int getStartMonth() {
-<span class="nc" id="L196">        return startMonth;</span>
+<span class="fc" id="L196">        return startMonth;</span>
     }
     
     /** Gets startYear */
     public int getStartYear() {
-<span class="nc" id="L201">        return startYear;</span>
+<span class="fc" id="L201">        return startYear;</span>
     }
  
     /** Gets title */
     public String getTitle() {
-<span class="nc" id="L206">        return title;</span>
+<span class="fc" id="L206">        return title;</span>
     }
     
     /** Gets description */
     public String getDescription() {
-<span class="nc" id="L211">        return description;</span>
+<span class="fc" id="L211">        return description;</span>
     }
     /** Gets description */
     public boolean getValid() {
-<span class="nc" id="L215">        return this.valid;</span>
+<span class="fc" id="L215">        return this.valid;</span>
     }
     /**
      * Sets the recurring information with the correct information
@@ -246,22 +246,22 @@ public class Appt implements  Comparable&lt;Appt&gt;{
 <span class="fc" id="L246">    }</span>
     /** Gets recurNumber */
     public int getRecurNumber() {
-<span class="nc" id="L249">        return recurNumber;</span>
+<span class="fc" id="L249">        return recurNumber;</span>
     }
     /** Gets recurBy */
     public int getRecurBy() {
-<span class="nc" id="L253">        return recurBy;</span>
+<span class="fc" id="L253">        return recurBy;</span>
     }
     /** Gets recurDays */
     public int[] getRecurDays() {
-<span class="nc" id="L257">        return recurDays;</span>
+<span class="fc" id="L257">        return recurDays;</span>
     }    
     /**
      * Checks to see if an appointment recurrs or not
      * @return True if the appointment does occur more than once
      */
     public boolean isRecurring() {
-<span class="nc bnc" id="L264" title="All 2 branches missed.">        return getRecurNumber() != RECUR_NUMBER_NEVER;</span>
+<span class="fc bfc" id="L264" title="All 2 branches covered.">        return getRecurNumber() != RECUR_NUMBER_NEVER;</span>
     }
     /** Gets recurIncrement */
     public int getRecurIncrement() {
@@ -277,27 +277,27 @@ public class Appt implements  Comparable&lt;Appt&gt;{
      * @return a printable representation of this appointment
      */
     private String represntationApp(){
-<span class="nc bnc" id="L280" title="All 2 branches missed.">        String half = (getStartHour() &gt; 11) ? &quot;pm&quot; : &quot;am&quot;;</span>
-<span class="nc" id="L281">        int printableHour = getStartHour();</span>
-<span class="nc bnc" id="L282" title="All 2 branches missed.">        if (printableHour &gt; 11)</span>
+<span class="pc bpc" id="L280" title="1 of 2 branches missed.">        String half = (getStartHour() &gt; 11) ? &quot;pm&quot; : &quot;am&quot;;</span>
+<span class="fc" id="L281">        int printableHour = getStartHour();</span>
+<span class="pc bpc" id="L282" title="1 of 2 branches missed.">        if (printableHour &gt; 11)</span>
         {
 <span class="nc" id="L284">            printableHour -= 12;</span>
         }
-<span class="nc bnc" id="L286" title="All 2 branches missed.">        if (printableHour == 0)</span>
+<span class="pc bpc" id="L286" title="1 of 2 branches missed.">        if (printableHour == 0)</span>
         {
 <span class="nc" id="L288">            printableHour = 12;</span>
         }
-<span class="nc" id="L290">        String represntationApp= printableHour +&quot;:&quot;+ getStartMinute() + half;</span>
-<span class="nc" id="L291">        return represntationApp;</span>
+<span class="fc" id="L290">        String represntationApp= printableHour +&quot;:&quot;+ getStartMinute() + half;</span>
+<span class="fc" id="L291">        return represntationApp;</span>
     	
     }
     public String toString()
     {
-<span class="nc bnc" id="L296" title="All 2 branches missed.">		if (!getValid()) {</span>
+<span class="pc bpc" id="L296" title="1 of 2 branches missed.">		if (!getValid()) {</span>
 <span class="nc" id="L297">		    return null;</span>
 		}
-<span class="nc" id="L299">         String day= this.getStartMonth()+&quot;/&quot;+this.getStartDay()+&quot;/&quot;+this.getStartYear() + &quot; at &quot;;</span>
-<span class="nc" id="L300">        return &quot;\t&quot;+ day +  this.represntationApp()  + &quot; ,&quot; +  getTitle()+ &quot;, &quot;+  getDescription()+&quot;\n&quot;;</span>
+<span class="fc" id="L299">         String day= this.getStartMonth()+&quot;/&quot;+this.getStartDay()+&quot;/&quot;+this.getStartYear() + &quot; at &quot;;</span>
+<span class="fc" id="L300">        return &quot;\t&quot;+ day +  this.represntationApp()  + &quot; ,&quot; +  getTitle()+ &quot;, &quot;+  getDescription()+&quot;\n&quot;;</span>
     }
 
  //   The compareTo() method is hard to explain, in integer sorting, just remember

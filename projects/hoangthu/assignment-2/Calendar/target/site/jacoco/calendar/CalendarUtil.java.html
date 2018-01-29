@@ -27,13 +27,13 @@ package calendar;
 	**/
 	public static int NumDaysInMonth(int year, int month) {
 		
-<span class="nc" id="L30">		int baseDays = DaysInMonth[month];</span>
+<span class="fc" id="L30">		int baseDays = DaysInMonth[month];</span>
 	
-<span class="nc bnc" id="L32" title="All 4 branches missed.">		if(IsLeapYear(year) &amp;&amp; (month == FEBRUARY)) {</span>
+<span class="pc bpc" id="L32" title="3 of 4 branches missed.">		if(IsLeapYear(year) &amp;&amp; (month == FEBRUARY)) {</span>
 <span class="nc" id="L33">				baseDays = baseDays + 1;</span>
 		}
 	
-<span class="nc" id="L36">		return baseDays;</span>
+<span class="fc" id="L36">		return baseDays;</span>
 	}
 	/**
 	*	Determines if the specified year is a Leap Year
@@ -45,11 +45,11 @@ package calendar;
 	//if the year is a multiple of 100, the year is a leap year if its also a multiple of 400
 	
 		//year is also leap year if multiple of 4
-<span class="nc bnc" id="L48" title="All 2 branches missed.">		if ((year % 4) == 0) {</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">		if ((year % 4) == 0) {</span>
 <span class="nc" id="L49">			return true;</span>
 		}
 		else{
-<span class="nc" id="L52">			return false;</span>
+<span class="fc" id="L52">			return false;</span>
 		}
 	}
 }
