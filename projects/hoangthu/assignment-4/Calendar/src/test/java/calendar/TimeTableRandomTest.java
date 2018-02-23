@@ -64,11 +64,35 @@ public class TimeTableRandomTest {
 					if(methodName.equals("deleteAppt")){
 						time.deleteAppt(listAppt, appt);
 						int newHour = ValuesGenerator.getRandomIntBetween(random, -5, 0);
-						appt = new Appt(hour, minute, day, month, year, "Assignment Due", "Due today, do today");
+						appt = new Appt(newHour, minute, day, month, year, "Assignment Due", "Due today, do today");
 						listAppt.add(appt);
 						test.addAppt(appt);
+						time.deleteAppt(listAppt, appt);
 					}else if(methodName.equals("getApptRange")){
-						
+						GregorianCalendar first, last;
+						first = new GregorianCalendar();
+						last = new GregorianCalendar();
+
+						appt = new Appt(3, 30, 4, 5, 2015, "movie night", "");
+						listAppt.add(appt);
+						test.addAppt(appt);
+
+						int year1 = ValuesGenerator.getRandomIntBetween(random, 2015, 2016);
+						int year2 = ValuesGenerator.getRandomIntBetween(random, 2016, 2018);
+						int month1 = ValuesGenerator.getRandomIntBetween(random, 1, 6);
+						int month2 = ValuesGenerator.getRandomIntBetween(random, 7, 12);
+						int day1 = ValuesGenerator.getRandomIntBetween(random, 1, 15);
+						int day2 = ValuesGenerator.getRandomIntBetween(random, 15, 31);
+
+						first.set(GregorianCalendar.YEAR, year1);
+						first.set(GregorianCalendar.MONTH, month1);
+						first.set(GregorianCalendar.DATE, day1);
+
+						last.set(GregorianCalendar.YEAR, year2);
+						last.set(GregorianCalendar.MONTH, month2);
+						last.set(GregorianCalendar.DATE, day2);
+
+						time.getApptRange(listAppt, first, last);
 					}
 				}
 				elapsed = (Calendar.getInstance().getTimeInMillis() - startTime);

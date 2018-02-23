@@ -188,17 +188,17 @@ public class Appt implements  Comparable&lt;Appt&gt;{
     
     /** Gets startDay */
     public int getStartDay() {
-<span class="nc" id="L191">        return startDay;</span>
+<span class="fc" id="L191">        return startDay;</span>
     }
     
     /** Gets startMonth */
     public int getStartMonth() {
-<span class="nc" id="L196">        return startMonth;</span>
+<span class="fc" id="L196">        return startMonth;</span>
     }
     
     /** Gets startYear */
     public int getStartYear() {
-<span class="nc" id="L201">        return startYear;</span>
+<span class="fc" id="L201">        return startYear;</span>
     }
  
     /** Gets title */
@@ -246,7 +246,7 @@ public class Appt implements  Comparable&lt;Appt&gt;{
 <span class="fc" id="L246">    }</span>
     /** Gets recurNumber */
     public int getRecurNumber() {
-<span class="nc" id="L249">        return recurNumber;</span>
+<span class="fc" id="L249">        return recurNumber;</span>
     }
     /** Gets recurBy */
     public int getRecurBy() {
@@ -261,7 +261,7 @@ public class Appt implements  Comparable&lt;Appt&gt;{
      * @return True if the appointment does occur more than once
      */
     public boolean isRecurring() {
-<span class="nc bnc" id="L264" title="All 2 branches missed.">        return getRecurNumber() != RECUR_NUMBER_NEVER;</span>
+<span class="pc bpc" id="L264" title="1 of 2 branches missed.">        return getRecurNumber() != RECUR_NUMBER_NEVER;</span>
     }
     /** Gets recurIncrement */
     public int getRecurIncrement() {
