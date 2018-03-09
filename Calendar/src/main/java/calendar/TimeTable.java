@@ -32,12 +32,12 @@ public class TimeTable {
 		  
 		     //Create a linked list of calendar days <CalDay> to return
 	        LinkedList<CalDay> calDays = new LinkedList<CalDay>();
-	     
 
-	        
 
-	        
-	        
+
+
+	//bug, missing, but there
+
 	        //Create the first CalDay object with the starting date and add to list
 	        GregorianCalendar nextDay = (GregorianCalendar) firstDay.clone();
 	        while (nextDay.before(lastDay)) {
@@ -204,7 +204,7 @@ public class TimeTable {
 
 	        //Remove the appointment from the list appts if applicable
 	        
-	        for(int i=1;i<appts.size();i++){
+	        for(int i=1;i<appts.size();i++){ //bug
 	        	Appt tempAppt=appts.get(i);
 	        	if(tempAppt.equals(appt)){
 	        		appts.remove(i);
