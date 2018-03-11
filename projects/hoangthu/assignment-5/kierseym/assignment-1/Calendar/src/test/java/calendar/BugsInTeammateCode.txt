@@ -1,0 +1,10 @@
+While testing your code, I found two bugs in two different classes.
+The first bug I found was in the class Appt.java in the method isValid() on line 122. In this method, if the variable startMinute is valid, then
+    start minute will be incremented by 2. By doing so, the incorrect startMinute will be saved for all of the user's appointments.
+    I would advise to not increment startMinute at all. This could possibly also cause startMinute to not be valid if it's originally set
+    to anything higher than 58.
+
+The second bug I found was in the class TimeTable.java in the method getApptRange() on line 36. With this bug, it causes a throw error while
+    retrieving the appointments. Because of the error, the app is unable to be used properly. I would advise to change the conditional by simply
+    negating the conditional instead of checking for the conditional. By doing so, it would allow the behavior of the Calendar app to retrieve the
+    saved appointments correctly.
